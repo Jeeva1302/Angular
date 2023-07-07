@@ -1,0 +1,51 @@
+#form{
+   
+    justify-content: space-between;
+}
+
+.drdetails{
+    text-align: center;
+}
+
+
+
+    .drdetails {
+        width:25%;
+      
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f1f1f1;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .drdetails:hover {
+      background-color: #ddd;
+    }
+
+    .drdetails a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    
+
+    /* Animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .pulse-animation {
+      animation: pulse 1s infinite;
+    }
+  

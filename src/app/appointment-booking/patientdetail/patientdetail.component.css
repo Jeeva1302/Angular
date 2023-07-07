@@ -1,0 +1,26 @@
+.container {
+    margin-top: 50px;
+    max-width: 700px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  
+  label {
+    font-weight: bold;
+  }
+  .result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  .table-container{
+    margin-left: 150px;
+    margin-top: 20px;
+  }

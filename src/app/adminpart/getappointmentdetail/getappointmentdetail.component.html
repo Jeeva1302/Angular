@@ -1,0 +1,32 @@
+<app-header2/>
+
+<!-- getappointmentdetail.component.html -->
+<div class="table-container w-75 active">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Appointment ID</th>
+          <th>Patient ID</th>
+          <th>Problem</th>
+          <th>Date to Visit</th>
+          <th>Timeslot</th>
+          <th>Specialisation</th>
+          <th>Doctor ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let app of appointments">
+          <td>{{ app.appointmentId }}</td>
+          <td>{{ app.patientId }}</td>
+          <td>{{ app.problem }}</td>
+          <td>{{ app.dateToVisit }}</td>
+          <td>{{ app.timeslot }}</td>
+          <td>{{ app.specialisationLookingFor }}</td>
+          <td>{{ app.doctorId }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-footer></app-footer>
+  

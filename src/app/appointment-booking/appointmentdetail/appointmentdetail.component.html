@@ -1,0 +1,43 @@
+
+<div class="container">
+    <h2>Appointment Form</h2>
+    <form (submit)="submitForm()">
+      <div class="form-group">
+        <label for="patientId">Patient ID:</label>
+        <input type="text" class="form-control" id="patientId" [(ngModel)]="appointment.patientId" name="patientId">
+      </div>
+      <div class="form-group">
+        <label for="problem">Problem:</label>
+        <input type="text" class="form-control" id="problem" [(ngModel)]="appointment.problem" name="problem">
+      </div>
+      <div class="form-group">
+        <label for="dateToVisit">Date to Visit:</label>
+        <input type="date" class="form-control" id="dateToVisit" [(ngModel)]="appointment.dateToVisit" name="dateToVisit">
+      </div>
+      <div class="form-group">
+        <label for="timeslot">Timeslot:</label>
+        <input type="text" class="form-control" id="timeslot" [(ngModel)]="appointment.timeslot" name="timeslot">
+      </div>
+      <div class="form-group">
+        <label for="specialisation">Specialisation Looking For:</label>
+        <select class="form-control" id="specialisation" [(ngModel)]="appointment.specialisationLookingFor" name="specialisationLookingFor">
+            <option value="">Select a Specialization</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="gynecology">Gynecology</option>
+            <option value="ophthalmology">Ophthalmology</option>
+            <option value="dentist">Dentist</option>
+            <option value="orthopedics">Orthopedics</option>
+            <option value="dermatology">Dermatology</option>
+            <option value="neurology">Neurology</option>
+          </select>
+    
+      </div>
+      <div class="form-group">
+        <label for="doctorId">Doctor ID:</label>
+        <input type="text" class="form-control" id="doctorId" [(ngModel)]="appointment.doctorId" name="doctorId">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  

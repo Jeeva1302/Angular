@@ -1,0 +1,44 @@
+<app-header>
+
+</app-header>
+<div class="back">
+<div class="signin"><h1 style="color: aliceblue;">Sign In</h1>
+  
+<form class="container" (ngSubmit)="signin()" novalidate>
+  
+  <div class="form-group">
+    <label for="emailid">Email ID:</label>
+    <input type="email" id="emailid" class="form-control" [(ngModel)]="emailid" name="emailid" required>
+    <div class="invalid-feedback">Please enter a valid email ID.</div>
+  </div>
+  <div class="form-group">
+    <label for="roles">Role:</label>
+    <select id="roles" class="form-control" name="roles" [(ngModel)]="roles">
+      <option value="User">User</option>
+      <option value="Admin">Admin</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" class="form-control" [(ngModel)]="password" name="password" required>
+    <div class="invalid-feedback">Please enter a password.</div>
+  </div>
+ 
+  
+  <button type="submit" class="btn btn-primary"(click)='signin()'>Sign In</button>
+  <div style="text-align: center;">
+    <p>
+        <span style="color: aliceblue;">
+            Don't have an account?
+        </span>
+        <a  class="pointer" [routerLink]="['signup']">
+            Sign up here
+        </a>
+    </p>
+  </div>
+</form>
+
+</div>
+</div>
+<app-footer></app-footer>
+

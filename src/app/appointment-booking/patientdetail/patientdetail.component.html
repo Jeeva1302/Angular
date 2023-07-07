@@ -1,0 +1,78 @@
+
+<div class="container">
+    <h2>Personal Details Form</h2>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="patientName">Patient Name</label>
+        <input type="text" class="form-control" id="patientName" placeholder="Enter patient name" name="patientname" [(ngModel)]="item.patientName">
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age" placeholder="Enterage here" name="age" [(ngModel)]="item.age">
+
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender" name="gender" [(ngModel)]="item.gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="transgender">Transgender</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea class="form-control" id="address" rows="3" name="address" placeholder="Enter address"  [(ngModel)]="item.address"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="text" class="form-control" id="mobileNumber" name="mobilenumber" placeholder="Enter mobile number"  [(ngModel)]="item.mobileNumber">
+      </div>
+      <div class="form-group">
+        <label for="patientType">Type of Patient</label>
+        <select class="form-control" id="patientType" name="patienttype"  [(ngModel)]="item.typeOfPatient">
+          <option value="in">In</option>
+          <option value="out">Out</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)=" getPatientByName()">Submit</button>
+    </form>
+  </div>
+
+<!--   
+  {{patient|json}} -->
+<!-- getappointmentdetail.component.html -->
+<div class="table-container w-75 active ">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        
+        <th>Patient ID</th>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>MobileNumber</th>
+        <th>Type of Patient </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let p of patient">
+        <td>{{p.patientId}}</td>
+        <td>{{p.patientName}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.address}}</td>
+        <td>{{p.mobileNumber}}</td>
+        <td>{{p.typeOfPatient}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+  

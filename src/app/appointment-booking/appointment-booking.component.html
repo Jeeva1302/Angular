@@ -1,0 +1,10 @@
+<app-header/>
+<div id="form">
+    <app-patientdetail></app-patientdetail>
+    <!-- <app-getpatientdetail></app-getpatientdetail> -->
+    <app-appointmentdetail></app-appointmentdetail>
+    <!-- <app-getdoctors></app-getdoctors> -->
+   <div  class="drdetails"> <a (click)="SHOW()">TO see doctor Details</a></div>
+    <div *ngIf="condition"><app-getdoctors></app-getdoctors></div>
+</div>
+<app-footer></app-footer>
